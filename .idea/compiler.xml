@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="RegisterService" />
+        <module name="APIGateWay" />
         <module name="DiscoveryService" />
         <module name="Authentication" />
       </profile>
@@ -21,6 +22,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="APIGateWay" options="-parameters" />
       <module name="Authentication" options="-parameters" />
       <module name="DiscoveryService" options="-parameters" />
       <module name="DiscoveryService (1)" options="-parameters" />
