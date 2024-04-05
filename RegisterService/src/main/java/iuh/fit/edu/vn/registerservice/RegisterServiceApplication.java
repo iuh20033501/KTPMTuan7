@@ -7,14 +7,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
-@EnableEurekaClient
+
 public class RegisterServiceApplication {
     @Autowired
     private UserRepository userRepository;
@@ -26,10 +25,10 @@ public class RegisterServiceApplication {
 return new CommandLineRunner() {
     @Override
         public void run(String... args) throws Exception {
-        User user = new User(1,"Hung","20033501","hungro8102@gmail.com");
-        User user2 = new User(2,"Oge","oge","oge@oge.com");
-        userRepository.save(user);
-        userRepository.save(user2);
+//        User user = new User(1,"Hung","20033501","hungro8102@gmail.com");
+//        User user2 = new User(2,"Oge","oge","oge@oge.com");
+//        userRepository.save(user);
+//        userRepository.save(user2);
         List<User> list = new ArrayList<>();
         list = userRepository.findAll();
         System.out.println(list);
